@@ -358,3 +358,27 @@ Para mostrar el directorio c:\ pasaremos como parámetro "C:\".
 
 d.
 Devuelve un array de Strings con los nombres de los ficheros y los directorios asociados al objeto File.
+
+
+
+
+1.-?
+2.-a
+3.-?
+4.-a
+5.-?
+6.-?
+7.-b
+8.-c
+9.-d
+10.-b
+11.-d
+12.-?
+13.-?
+14.-c
+15.-?
+16.-d
+17.-a
+18.-d
+19.-c
+20.-b
