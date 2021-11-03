@@ -1,0 +1,13 @@
+.root{
+    -fx-background-color: #000000;
+}
+Button{
+    -fx-background-radius: 0;
+}
+.Botonum{
+     -fx-background-color: #DEBA9D;
+     -fx-font-weight: bold;
+}
+.Botonum:hover{
+    -fx-background-color: #6F4C5B;
+}

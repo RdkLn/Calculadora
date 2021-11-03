@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.test1.HelloController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #DFD8CA;" stylesheets="estilos.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.test1.HelloController">
    <children>
        <HBox prefHeight="100.0" prefWidth="200.0">
-           <Label fx:id="resultado" alignment="CENTER_RIGHT" prefHeight="189.0" prefWidth="630.0" text="0" textAlignment="RIGHT">
+           <Label fx:id="resultado" alignment="CENTER_RIGHT" prefHeight="189.0" prefWidth="630.0" style="-fx-background-color: #DEBA9D;" text="0" textAlignment="RIGHT" textFill="#f5e8c7">
             <font>
                <Font name="System Bold" size="48.0" />
             </font>
            </Label>
        </HBox>
-      <GridPane prefHeight="305.0" prefWidth="600.0">
+      <GridPane prefHeight="305.0" prefWidth="600.0" style="-fx-background-color: #6F4C5B;">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -33,25 +28,80 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="C" mnemonicParsing="false" prefHeight="275.0" prefWidth="166.0" text="C" />
-            <Button fx:id="borrar" mnemonicParsing="false" prefHeight="140.0" prefWidth="368.0" text="&lt;-" GridPane.columnIndex="1" />
-            <Button fx:id="porcentaje" mnemonicParsing="false" onMouseClicked="#Operation" prefHeight="99.0" prefWidth="342.0" text="\%" GridPane.columnIndex="2" />
-            <Button fx:id="dividir" mnemonicParsing="false" onMouseClicked="#Operation" prefHeight="86.0" prefWidth="237.0" text="/" GridPane.columnIndex="3" />
-            <Button fx:id="num8" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="86.0" prefWidth="237.0" styleClass="boton" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button fx:id="num7" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="86.0" prefWidth="237.0" styleClass="boton" text="7" GridPane.rowIndex="1" />
-            <Button fx:id="por" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#Operation" prefHeight="86.0" prefWidth="237.0" text="x" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <Button fx:id="num1" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="86.0" prefWidth="237.0" styleClass="boton" text="1" GridPane.rowIndex="3" />
-            <Button fx:id="num9" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="86.0" prefWidth="237.0" styleClass="boton" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Button fx:id="mas" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#Operation" prefHeight="86.0" prefWidth="237.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-            <Button fx:id="num3" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="86.0" prefWidth="237.0" styleClass="boton" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <Button fx:id="num2" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="86.0" prefWidth="237.0" styleClass="boton" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Button fx:id="menos" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#Operation" prefHeight="86.0" prefWidth="237.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <Button fx:id="num6" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="86.0" prefWidth="237.0" styleClass="boton" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <Button fx:id="num5" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="86.0" prefWidth="237.0" styleClass="boton" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button fx:id="num4" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="86.0" prefWidth="237.0" styleClass="boton" text="4" GridPane.rowIndex="2" />
-            <Button fx:id="igual" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="237.0" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-            <Button fx:id="coma" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="237.0" text="," GridPane.columnIndex="2" GridPane.rowIndex="4" />
-            <Button fx:id="num0" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="86.0" prefWidth="237.0" styleClass="boton" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button fx:id="C" mnemonicParsing="false" onMouseClicked="#Operation" prefHeight="275.0" prefWidth="166.0" style="-fx-background-color: #6F4C5B;" text="C" textFill="#f5e8c7">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button fx:id="borrar" mnemonicParsing="false" onMouseClicked="#borrarUltimo" prefHeight="140.0" prefWidth="368.0" style="-fx-background-color: #6F4C5B;" text="&lt;-" textFill="#f5e8c7" GridPane.columnIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button fx:id="porcentaje" mnemonicParsing="false" onMouseClicked="#Operation" prefHeight="99.0" prefWidth="342.0" style="-fx-background-color: #6F4C5B;" text="\%" textFill="#f5e8c7" GridPane.columnIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button fx:id="division" mnemonicParsing="false" onMouseClicked="#Operation" prefHeight="86.0" prefWidth="237.0" style="-fx-background-color: #9E7777; -fx-border-width: 0px; -fx-border-style: none; -fx-border-radius: 0px; -fx-font-weight: bold;" text="/" textFill="#f5e8c7" GridPane.columnIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button fx:id="num8" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="86.0" prefWidth="237.0" style="-fx-border-width: 0;" styleClass="Botonum" text="8" textFill="#f5e8c7" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button fx:id="num7" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="86.0" prefWidth="237.0" style="-fx-border-width: 0;" styleClass="Botonum" text="7" textFill="#f5e8c7" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button fx:id="multiplicacion" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#Operation" prefHeight="86.0" prefWidth="237.0" style="-fx-background-color: #9E7777; -fx-border-width: 0px; -fx-border-style: none; -fx-border-radius: 0px; -fx-font-weight: bold;" text="x" textFill="#f5e8c7" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button fx:id="num1" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="86.0" prefWidth="237.0" style="-fx-border-width: 0;" styleClass="Botonum" text="1" textFill="#f5e8c7" GridPane.rowIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button fx:id="num9" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="86.0" prefWidth="237.0" style="-fx-border-width: 0;" styleClass="Botonum" text="9" textFill="#f5e8c7" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button fx:id="suma" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#Operation" prefHeight="86.0" prefWidth="237.0" style="-fx-background-color: #9E7777; -fx-border-width: 0px; -fx-border-style: none; -fx-border-radius: 0px; -fx-font-weight: bold;" text="+" textFill="#f5e8c7" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button fx:id="num3" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="86.0" prefWidth="237.0" style="-fx-border-width: 0;" styleClass="Botonum" text="3" textFill="#f5e8c7" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button fx:id="num2" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="86.0" prefWidth="237.0" style="-fx-border-width: 0;" styleClass="Botonum" text="2" textFill="#f5e8c7" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button fx:id="resta" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#Operation" prefHeight="86.0" prefWidth="237.0" style="-fx-background-color: #9E7777; -fx-border-width: 0px; -fx-border-style: none; -fx-border-radius: 0px; -fx-font-weight: bold;" text="-" textFill="#f5e8c7" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button fx:id="num6" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="86.0" prefWidth="237.0" style="-fx-border-width: 0;" styleClass="Botonum" text="6" textFill="#f5e8c7" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button fx:id="num5" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="86.0" prefWidth="237.0" style="-fx-border-width: 0;" styleClass="Botonum" text="5" textFill="#f5e8c7" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button fx:id="num4" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="86.0" prefWidth="237.0" style="-fx-border-width: 0;" styleClass="Botonum" text="4" textFill="#f5e8c7" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button fx:id="igual" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#Operation" prefHeight="86.0" prefWidth="237.0" style="-fx-background-color: #9E7777; -fx-border-width: 0px; -fx-border-style: none; -fx-border-radius: 0px; -fx-font-weight: bold;" text="=" textFill="#f5e8c7" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button fx:id="coma" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="237.0" style="-fx-background-color: #6F4C5B;" text="," textFill="#f5e8c7" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Button fx:id="num0" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="86.0" prefWidth="237.0" style="-fx-border-width: 0;" styleClass="Botonum" text="0" textFill="#f5e8c7" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" prefHeight="69.0" prefWidth="155.0" style="-fx-background-color: #6F4C5B;" GridPane.rowIndex="4" />
          </children>
       </GridPane>
    </children>
