@@ -28,7 +28,7 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="C" mnemonicParsing="false" onMouseClicked="#Operation" prefHeight="275.0" prefWidth="166.0" style="-fx-background-color: #6F4C5B;" text="C" textFill="#f5e8c7">
+            <Button fx:id="C" mnemonicParsing="false" onMouseClicked="#borrarTodo" prefHeight="275.0" prefWidth="166.0" style="-fx-background-color: #6F4C5B;" text="C" textFill="#f5e8c7">
                <font>
                   <Font size="14.0" />
                </font></Button>
@@ -36,7 +36,7 @@
                <font>
                   <Font size="14.0" />
                </font></Button>
-            <Button fx:id="porcentaje" mnemonicParsing="false" onMouseClicked="#Operation" prefHeight="99.0" prefWidth="342.0" style="-fx-background-color: #6F4C5B;" text="\%" textFill="#f5e8c7" GridPane.columnIndex="2">
+            <Button fx:id="porcentaje" mnemonicParsing="false" onMouseClicked="#porcentaje" prefHeight="99.0" prefWidth="342.0" style="-fx-background-color: #6F4C5B;" text="\%" textFill="#f5e8c7" GridPane.columnIndex="2">
                <font>
                   <Font size="14.0" />
                </font></Button>
@@ -92,11 +92,11 @@
                <font>
                   <Font size="14.0" />
                </font></Button>
-            <Button fx:id="igual" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#Operation" prefHeight="86.0" prefWidth="237.0" style="-fx-background-color: #9E7777; -fx-border-width: 0px; -fx-border-style: none; -fx-border-radius: 0px; -fx-font-weight: bold;" text="=" textFill="#f5e8c7" GridPane.columnIndex="3" GridPane.rowIndex="4">
+            <Button fx:id="igual" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#calcular" prefHeight="86.0" prefWidth="237.0" style="-fx-background-color: #9E7777; -fx-border-width: 0px; -fx-border-style: none; -fx-border-radius: 0px; -fx-font-weight: bold;" text="=" textFill="#f5e8c7" GridPane.columnIndex="3" GridPane.rowIndex="4">
                <font>
                   <Font size="14.0" />
                </font></Button>
-            <Button fx:id="coma" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="237.0" style="-fx-background-color: #6F4C5B;" text="," textFill="#f5e8c7" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Button fx:id="coma" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="86.0" prefWidth="237.0" style="-fx-background-color: #6F4C5B;" text="." textFill="#f5e8c7" GridPane.columnIndex="2" GridPane.rowIndex="4" />
             <Button fx:id="num0" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="86.0" prefWidth="237.0" style="-fx-border-width: 0;" styleClass="Botonum" text="0" textFill="#f5e8c7" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <font>
                   <Font size="14.0" />
