@@ -5,15 +5,21 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import org.mariuszgromada.math.mxparser.Expression;
-
 import java.util.regex.Pattern;
 
 public class HelloController {
     @FXML
     private Label resultado;
-
     @FXML
     private Button igual;
+    @FXML
+    private Button resta;
+    @FXML
+    private Button division;
+    @FXML
+    private Button suma;
+    @FXML
+    private Button multiplicacion;
 
     String linea ="";
     public void onClick(MouseEvent actionEvent) {
@@ -21,10 +27,25 @@ public class HelloController {
         String leernum=((Button)actionEvent.getSource()).getText();
         if (!linea.isEmpty() && leernum.equals(".")){
             if (!(linea.charAt(linea.length()-1)=='.')){
-                linea = linea +leernum;
+                if ((Pattern.compile("[x+/-]$").matcher(linea).find())) {
+                    linea = linea + "0" + leernum;
+                }else linea = linea +leernum;
             }
         }else{
             linea = linea +leernum;
+        }
+        if (linea.charAt(linea.length()-1)=='.'){
+            igual.setDisable(true);
+            resta.setDisable(true);
+            multiplicacion.setDisable(true);
+            suma.setDisable(true);
+            division.setDisable(true);
+        }else{
+            igual.setDisable(false);
+            resta.setDisable(false);
+            multiplicacion.setDisable(false);
+            suma.setDisable(false);
+            division.setDisable(false);
         }
         resultado.setText(linea);
     }
@@ -40,13 +61,15 @@ public class HelloController {
         }
     }
 
-
     public void borrarUltimo(MouseEvent mouseEvent) {
-        linea=linea.substring(0,linea.length()-1);
+        if (!(linea.length()==0))linea=linea.substring(0,linea.length()-1);
         resultado.setText(linea);
     }
 
     public void porcentaje(MouseEvent mouseEvent) {
+        if ((Pattern.compile("[x+/-]$").matcher(linea).find())){
+            borrarUltimo(mouseEvent);
+        }
         calcular(mouseEvent);
         double result=Double.parseDouble(resultado.getText());
         Double porcentaje=result/100;
