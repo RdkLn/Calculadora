@@ -15,6 +15,7 @@ public class HelloApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 420, 340);
         scene.getStylesheets().add(HelloApplication.class.getResource("estilos.css").toExternalForm());
         stage.setTitle("Calculadora");
+        stage.setResizable(false);
         stage.setScene(scene);
 //        stage.setResizable(false);
         stage.show();
