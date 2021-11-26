@@ -67,11 +67,16 @@ public class HelloController {
     }
 
     public void porcentaje(MouseEvent mouseEvent) {
+        double result;
         if ((Pattern.compile("[x+/-]$").matcher(linea).find())){
-            borrarUltimo(mouseEvent);
+            linea=linea.substring(0,linea.length()-1);
         }
         calcular(mouseEvent);
-        double result=Double.parseDouble(resultado.getText());
+        if (linea.length()==0){
+            result=0;
+        }else{
+            result=Double.parseDouble(resultado.getText());
+        }
         Double porcentaje=result/100;
         linea= String.valueOf(porcentaje);
         resultado.setText(linea);
